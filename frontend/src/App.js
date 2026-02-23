@@ -15,7 +15,7 @@ function App() {
       return;
     }
     try{
-      const response = await axios.post("http://localhost:3001/shorten", {originalUrl: originalUrl});
+      const response = await axios.post("https://url-shortener-imhk.onrender.com/shorten", {originalUrl: originalUrl});
       setShortUrl(response.data.shortUrl);
       console.log("Short URL created: ", response.data);
     } catch(error){
